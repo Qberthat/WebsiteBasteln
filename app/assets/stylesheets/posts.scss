@@ -66,6 +66,9 @@ content.body{
     background-color: white;
     outline: 1px solid #000000;
     outline-offset: 1px;
+    &.warning {
+      background-color: red;
+    }
   }
 
   a:any-link{
@@ -104,9 +107,13 @@ h3{
   font-size: 12px;
 }
 textarea{
-  width: 484px;
-  height: 161px;
-  margin: 2px;
+     width: 484px;
+     height: 161px;
+     margin: 2px;
+}
+
+.warning{
+  color: red;
 }
 
 body {
