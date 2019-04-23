@@ -11,11 +11,12 @@
 
   <body>
     <div class="head_bar">
-      <pre> Der Vesputi Challenge Blog </pre>
       <% if current_user == nil %>
         <%= link_to 'Log in', new_user_session_path, method: :get %>
+        <pre> Der Vesputi Challenge Blog </pre>
       <% else %>
-      Hallo <%= current_user.email %>(<%= current_user.role%>)<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'warning' %>
+        Hallo <%= current_user.email %>(<%= current_user.role%>)<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'warning' %>
+        <pre> Der Vesputi Challenge Blog </pre>
       <% end %>
     </div>
     <div class="content">
