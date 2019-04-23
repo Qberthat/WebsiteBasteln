@@ -8,7 +8,7 @@ class Ability
     # can :read, Post, public: true
 
     can :read, :all
-    can :comment, :all
+    can :manage, Comment
 
     if user.present?  # additional permissions for logged in users (they can read their own posts)
      # can :read, Post, user_id: user.id
@@ -16,7 +16,6 @@ class Ability
 
      if user.is_author?
        can :manage, Post
-       can :manage, Comment
      end
 
      if user.is_admin?

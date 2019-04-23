@@ -1,11 +1,16 @@
-<h5>Post a Comment</h5>
+<h5>Post a Comment</h5> <br/>
 <div class='write_comment'>
   <%= form_for [ @post, @comment ] do |form| %>
 
   <div class="field">
-    <%= form.label :user_id, 'Your Name' %>
-    <%= form.text_field :title  %>
+    <%= form.label :user_id, 'Hey,' %> <br/>
+    <% if current_user == nil %>
+      <%= form.text_field :title %>
+      <% else %>
+    <%= User.find(@post.user_id).email %>
+    <% end %>
   </div>
+  <br/>
 
   <div class="field">
     <%= form.label :Comment_here %>
