@@ -1,0 +1,5 @@
+<section>
+  <h3>Comment from <%= comment.title %></h3>
+  <p class="comment"><%= comment.body %></p>
+  <p> Posted <%= distance_of_time_in_words(comment.post.created_at, comment.created_at)%> after Post was created </p>
+</section>

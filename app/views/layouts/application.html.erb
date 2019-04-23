@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChallengeBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="head_bar">
+      <% if current_user == nil %>
+        <%= link_to 'Log in', new_user_session_path, method: :get %>
+      <% else %>
+      Hallo <%= current_user.email %>(<%= current_user.role%>)<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'warning' %>
+      <pre> Der Vesputi Challenge Blog </pre>
+      <% end %>
+    </div>
+    <div class="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>
