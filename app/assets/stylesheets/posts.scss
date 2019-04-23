@@ -7,7 +7,7 @@ h1 {
   text-align: center;
 }
 
-pre{
+pre {
   color: black;
   max-width: 250px;
   text-align: center;
@@ -19,7 +19,10 @@ pre{
   margin-left: auto;
   margin-right: auto;
   border: 5px;
-  border-style:double;
+  border-style:ridge;
+  border-color: black;
+  box-shadow:-7px 3px 5px black;
+
 }
 .head_bar {
   background-color: lightblue;
@@ -50,30 +53,32 @@ pre{
     color: blue;
     font-size: 15px;
     background-color: white;
-    outline: 1px solid #000000;
-    outline-offset: 1px;
+    outline: 2px solid #000000;
+    outline-offset: 0px;
+    box-shadow: -1px 3px 5px black;
     &.warning {
       background-color: red;
     }
   }
-  a:visited{
+  a:visited {
     color: black;
     font-size: 15px;
     background-color: white;
     outline: 1px solid #000000;
     outline-offset: 1px;
+    box-shadow: -1px 3px 5px black;
     &.warning {
       background-color: red;
     }
   }
 
-  a:any-link{
+  a:any-link {
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
     color: rgba(23,22,178,0.45);
   }
-  p.comment{
+  p.comment {
     line-height: px;
   }
   h5{
@@ -81,34 +86,34 @@ pre{
     margin-bottom: 5px;
     font-size: 18px;
   }
-  section{
+  section {
     outline: 1px solid black;
     outline-offset: 6px;
   }
 }
-.write_comment{
+.write_comment {
   outline: none;
 }
-h2{
+h2 {
   font-size: 18px;
   margin-top: 50px;
   margin-bottom: 30px
 }
-h3{
+h3 {
   font-size: 16px;
 }
 
-.comment{
+.comment {
   margin-top: 15px;
   font-size: 12px;
 }
-textarea{
+textarea {
   width: 484px;
   height: 161px;
   margin: 2px;
 }
 
-.warning{
+.warning {
   color: red;
 }
 
