@@ -1,20 +1,19 @@
+<h5>Post a Comment</h5>
+<div class='write_comment'>
+  <%= form_for [ @post, @comment ] do |form| %>
 
-<h5>Post a Comment</h5> <br/>
-<div class='write_comment'
-<%= form_for [ @post, @comment ] do |form| %>
+  <div class="field">
+    <%= form.label :user_id, 'Your Name' %>
+    <%= form.text_field :title  %>
+  </div>
 
-<div class="field">
-  <%= form.label :user_id, 'Your Name' %>
-  <%= form.text_field :title  %>
-</div>
+  <div class="field">
+    <%= form.label :Comment_here %>
+    <%= form.text_area :body %>
+  </div>
 
-<div class="field">
-  <%= form.label :Comment_here %>
-  <%= form.text_area :body %>
-</div>
-
-<div class="actions">
-  <%= form.submit %>
-</div>
-<% end %>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% end %>
 </div>
